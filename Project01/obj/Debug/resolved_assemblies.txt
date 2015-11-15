@@ -1,0 +1,11 @@
+C:\Users\Maryn\Documents\Projects\Project01\Project01\obj\Debug\assemblies\Project01.dll
+C:\Users\Maryn\Documents\Projects\Project01\Project01\obj\Debug\assemblies\Mono.Android.dll
+C:\Users\Maryn\Documents\Projects\Project01\Project01\obj\Debug\assemblies\Mono.Data.Sqlite.dll
+C:\Users\Maryn\Documents\Projects\Project01\Project01\obj\Debug\assemblies\mscorlib.dll
+C:\Users\Maryn\Documents\Projects\Project01\Project01\obj\Debug\assemblies\System.Core.dll
+C:\Users\Maryn\Documents\Projects\Project01\Project01\obj\Debug\assemblies\System.Data.dll
+C:\Users\Maryn\Documents\Projects\Project01\Project01\obj\Debug\assemblies\System.dll
+C:\Users\Maryn\Documents\Projects\Project01\Project01\obj\Debug\assemblies\System.Xml.dll
+C:\Users\Maryn\Documents\Projects\Project01\Project01\obj\Debug\assemblies\System.Transactions.dll
+C:\Users\Maryn\Documents\Projects\Project01\Project01\obj\Debug\assemblies\Mono.Data.Tds.dll
+C:\Users\Maryn\Documents\Projects\Project01\Project01\obj\Debug\assemblies\Mono.Security.dll
