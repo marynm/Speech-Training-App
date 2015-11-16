@@ -53,12 +53,19 @@
     <Compile Include="Screens\WordListScreen.cs" />
     <Compile Include="Screens\LanguageScreen.cs" />
     <Compile Include="Adapters\WordListAdapter.cs" />
-    <Compile Include="Word.cs" />
+    <Compile Include="Word.cs">
+      <DependentUpon>WordDatabaseADO.cs</DependentUpon>
+    </Compile>
     <Compile Include="WordRepositoryADO.cs" />
     <Compile Include="WordDatabaseADO.cs" />
     <Compile Include="WordManager.cs" />
     <Compile Include="Screens\TaskDetailsScreen.cs" />
-    <Compile Include="Screens\HomeScreen.cs" />
+    <Compile Include="LanguageRepositoryADO.cs" />
+    <Compile Include="LanguageDatabaseADO.cs" />
+    <Compile Include="LanguageManager.cs" />
+    <Compile Include="Language.cs">
+      <DependentUpon>WordDatabaseADO.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
