@@ -52,3 +52,7 @@ C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\De
 C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\drawable-hdpi\tutorialtone2.jpg
 C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\drawable-hdpi\tutorialtone3.jpg
 C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\drawable-hdpi\tutorialtone4.jpg
+C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\raw\f1mother.wav
+C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\raw\f2numb.wav
+C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\raw\f3horse.wav
+C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\raw\f4scold.wav

@@ -93,6 +93,10 @@
     <AndroidResource Include="Resources\drawable-hdpi\TutorialTone2.JPG" />
     <AndroidResource Include="Resources\drawable-hdpi\TutorialTone3.JPG" />
     <AndroidResource Include="Resources\drawable-hdpi\TutorialTone4.JPG" />
+    <AndroidResource Include="Resources\raw\F1mother.wav" />
+    <AndroidResource Include="Resources\raw\F2numb.wav" />
+    <AndroidResource Include="Resources\raw\F3horse.wav" />
+    <AndroidResource Include="Resources\raw\F4scold.wav" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Screens\" />

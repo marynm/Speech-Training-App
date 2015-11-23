@@ -39,12 +39,18 @@ namespace Project01.Screens
 			Gallery gallery = (Gallery) FindViewById<Gallery>(Resource.Id.tutorial_gallery);
 
 			gallery.Adapter = new ImageAdapter (this);
-
+			//Toast.MakeText (this, args.Position.ToString (), ToastLength.Short).Show ();
 			gallery.ItemClick += delegate (object sender, Android.Widget.AdapterView.ItemClickEventArgs args) {
-				//Toast.MakeText (this, args.Position.ToString (), ToastLength.Short).Show ();
-				_player = MediaPlayer.Create(this, Resource.Raw.forget);
-				_player.Start ();
+				if(args.Position == 0)
+					_player = MediaPlayer.Create(this, Resource.Raw.F1mother);
+				else if(args.Position == 1)
+					_player = MediaPlayer.Create(this, Resource.Raw.F2numb);
+				else if(args.Position == 2)
+					_player = MediaPlayer.Create(this, Resource.Raw.F3horse);
+				else if(args.Position == 3)
+					_player = MediaPlayer.Create(this, Resource.Raw.F4scold);
 
+				_player.Start ();
 
 			};
 
