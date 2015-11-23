@@ -11,7 +11,7 @@ namespace Project01 {
 		public int ID { get; set; }
 		public string Name { get; set; }
 		public string Definition { get; set; }
-		public int Score { get; set; }
+		public Score currentScore { get; set; }
 		public string Sound { get; set; }
 	}
 }

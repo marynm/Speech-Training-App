@@ -13,28 +13,38 @@ public final class R {
     public static final class drawable {
         public static final int icon=0x7f020000;
         public static final int icon1=0x7f020001;
+        public static final int tutorialtone1=0x7f020002;
+        public static final int tutorialtone2=0x7f020003;
+        public static final int tutorialtone3=0x7f020004;
+        public static final int tutorialtone4=0x7f020005;
     }
     public static final class id {
         public static final int back=0x7f06000b;
+        public static final int checkedTextView1=0x7f060008;
         public static final int currentWord=0x7f060004;
-        public static final int exampleMode=0x7f06000a;
+        public static final int exampleMode=0x7f06000f;
         public static final int imageView1=0x7f060005;
         public static final int language=0x7f060002;
         public static final int linearLayout1=0x7f060000;
         public static final int listView1=0x7f060003;
         public static final int listen_button=0x7f060006;
         public static final int record_button=0x7f060007;
-        public static final int searchView1=0x7f060008;
+        public static final int searchView1=0x7f06000c;
         public static final int textView1=0x7f060001;
-        public static final int wordList=0x7f060009;
+        public static final int textView2=0x7f06000a;
+        public static final int tutorial=0x7f06000e;
+        public static final int tutorial_gallery=0x7f060009;
+        public static final int wordList=0x7f06000d;
     }
     public static final class layout {
         public static final int languageselect=0x7f030000;
         public static final int lesson=0x7f030001;
-        public static final int wordselect=0x7f030002;
+        public static final int tonetutorial01=0x7f030002;
+        public static final int wordselect=0x7f030003;
     }
     public static final class raw {
-        public static final int test=0x7f040000;
+        public static final int forget=0x7f040000;
+        public static final int test=0x7f040001;
     }
     public static final class string {
         public static final int app_name=0x7f050001;

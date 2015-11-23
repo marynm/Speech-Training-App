@@ -27,11 +27,12 @@ namespace Project01.Screens
 			SetContentView (Resource.Layout.WordSelect);
 
 			// Get our UI controls from the loaded layout:
-			Button exampleButton = FindViewById<Button>(Resource.Id.exampleMode);
+			Button exampleButton = FindViewById<Button>(Resource.Id.exampleMode);	//temporary button for development
 			Button backButton = FindViewById<Button>(Resource.Id.back);
+			Button tutorialButton = FindViewById<Button>(Resource.Id.tutorial); 
 
 
-			//wire up add task button handlers
+			//wire up add example button handler
 			if(exampleButton != null) {
 					exampleButton.Click += (sender, e) => {
 						StartActivity(typeof(LessonScreen));
@@ -67,12 +68,19 @@ namespace Project01.Screens
 				};
 			}
 
-			// wire up task click handler
+			// wire up word click handler
 			if(wordListView != null) {
 				wordListView.ItemClick += (object sender, AdapterView.ItemClickEventArgs e) => {
 					var wordDetails = new Intent (this, typeof (LessonScreen));
 					wordDetails.PutExtra ("WordID", words[e.Position].ID);
 					StartActivity (wordDetails);
+				};
+			}
+
+			// wire up task click handler
+			if(tutorialButton != null) {
+				tutorialButton.Click += (sender, e) => {
+					StartActivity(typeof(ToneTutorial));
 				};
 			}
 		}

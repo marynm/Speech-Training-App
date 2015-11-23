@@ -25,11 +25,11 @@ namespace Project01 {
 		{
 			return LanguageRepositoryADO.SaveLanguage(item);
 		}
-
+		/*
 		public static int DeleteWLanguage(int id)
 		{
 			return LanguageRepositoryADO.DeleteLanguage(id);
 		}
-
+*/
 	}
 }

@@ -52,10 +52,7 @@ namespace Project01
 		/// <summary>Convert from DataReader to Language object</summary>
 		Language FromReader (SqliteDataReader r) {
 			var t = new Language ();
-			t.ID = Convert.ToInt32 (r ["_id"]);
-			t.Name = r ["Name"].ToString ();
-			t.Definition = r ["Definition"].ToString ();
-			t.Score = Convert.ToInt32( r ["Score"]); //Convert.ToInt32 (r ["Score"]) == 1 ? true : false;
+			//NEED CODE HERE ???
 			return t;
 		}
 
@@ -102,27 +99,33 @@ namespace Project01
 		{
 			int r;
 			lock (locker) {
-				if (item.ID != 0) {
+				//if (item.ID != 0) 
+				{
 					connection = new SqliteConnection ("Data Source=" + path);
 					connection.Open ();
 					using (var command = connection.CreateCommand ()) {
+						/*
 						command.CommandText = "UPDATE [Items] SET [Name] = ?, [Definition] = ?, [Score] = ? WHERE [_id] = ?;";
 						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Name });
 						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Definition });
 						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.Score });
 						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.ID });
+						*/
 						r = command.ExecuteNonQuery ();
 					}
 					connection.Close ();
 					return r;
-				} else {
+				} //else 
+			{
 					connection = new SqliteConnection ("Data Source=" + path);
 					connection.Open ();
 					using (var command = connection.CreateCommand ()) {
+						/*
 						command.CommandText = "INSERT INTO [Items] ([Name], [Definition], [Score]) VALUES (? ,?, ?)";
 						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Name });
 						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Definition });
 						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.Score });
+						*/
 						r = command.ExecuteNonQuery ();
 					}
 					connection.Close ();
@@ -131,7 +134,7 @@ namespace Project01
 
 			}
 		}
-
+/*	
 		public int DeleteItem(int id) 
 		{
 			lock (locker) {
@@ -147,6 +150,6 @@ namespace Project01
 				return r;
 			}
 		}
-
+*/
 	}
 }

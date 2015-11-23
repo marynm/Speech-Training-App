@@ -45,7 +45,7 @@ namespace Project01.Screens {
 			_play_word.Click += delegate {
 
 				if(!playing) {
-					_player = MediaPlayer.Create (this, Resource.Raw.test);
+					_player = MediaPlayer.Create (this, Resource.Raw.forget);
 					_player.Start ();
 					playing = true;
 				}

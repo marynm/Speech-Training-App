@@ -8,10 +8,6 @@ namespace Project01 {
 		public Language ()
 		{
 		}
-		public int ID { get; set; }
-		public string Name { get; set; }
-		public string Definition { get; set; }
-		public int Score { get; set; }
-		public string Sound { get; set; }
+		public Word langWords { get; set; }
 	}
 }

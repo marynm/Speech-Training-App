@@ -53,19 +53,17 @@
     <Compile Include="Screens\WordListScreen.cs" />
     <Compile Include="Screens\LanguageScreen.cs" />
     <Compile Include="Adapters\WordListAdapter.cs" />
-    <Compile Include="Word.cs">
-      <DependentUpon>WordDatabaseADO.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Word.cs" />
     <Compile Include="WordRepositoryADO.cs" />
     <Compile Include="WordDatabaseADO.cs" />
     <Compile Include="WordManager.cs" />
-    <Compile Include="Screens\TaskDetailsScreen.cs" />
     <Compile Include="LanguageRepositoryADO.cs" />
     <Compile Include="LanguageDatabaseADO.cs" />
     <Compile Include="LanguageManager.cs" />
-    <Compile Include="Language.cs">
-      <DependentUpon>WordDatabaseADO.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Language.cs" />
+    <Compile Include="Score.cs" />
+    <Compile Include="Screens\ToneTutorial.cs" />
+    <Compile Include="ImageAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -89,12 +87,18 @@
     <AndroidResource Include="Resources\drawable-xhdpi\icon1.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon1.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\icon1.png" />
+    <AndroidResource Include="Resources\raw\forget.wav" />
+    <AndroidResource Include="Resources\layout\ToneTutorial01.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\TutorialTone1.JPG" />
+    <AndroidResource Include="Resources\drawable-hdpi\TutorialTone2.JPG" />
+    <AndroidResource Include="Resources\drawable-hdpi\TutorialTone3.JPG" />
+    <AndroidResource Include="Resources\drawable-hdpi\TutorialTone4.JPG" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Screens\" />
     <Folder Include="Resources\raw\" />
     <Folder Include="Adapters\" />
     <Folder Include="Project01\Screens\" />
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

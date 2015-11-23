@@ -66,10 +66,10 @@ namespace Project01 {
 			return me.db.SaveItem(item);
 		}
 
-		public static int DeleteLanguage(int id)
-		{
-			return me.db.DeleteItem(id);
-		}
+		//public static int DeleteLanguage(int id)
+		//{
+		//	return me.db.DeleteItem(id);
+		//}
 
 	}
 }

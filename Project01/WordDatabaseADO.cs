@@ -55,7 +55,7 @@ namespace Project01
 			t.ID = Convert.ToInt32 (r ["_id"]);
 			t.Name = r ["Name"].ToString ();
 			t.Definition = r ["Definition"].ToString ();
-			t.Score = Convert.ToInt32( r ["Score"]); //Convert.ToInt32 (r ["Score"]) == 1 ? true : false;
+			//t.currentScore.Total = Convert.ToInt32( r ["Score"]); //Convert.ToInt32 (r ["Score"]) == 1 ? true : false;
 			return t;
 		}
 
@@ -109,7 +109,7 @@ namespace Project01
 						command.CommandText = "UPDATE [Items] SET [Name] = ?, [Definition] = ?, [Score] = ? WHERE [_id] = ?;";
 						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Name });
 						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Definition });
-						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.Score });
+						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.currentScore });
 						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.ID });
 						r = command.ExecuteNonQuery ();
 					}
@@ -122,7 +122,7 @@ namespace Project01
 						command.CommandText = "INSERT INTO [Items] ([Name], [Definition], [Score]) VALUES (? ,?, ?)";
 						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Name });
 						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Definition });
-						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.Score });
+						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.currentScore });
 						r = command.ExecuteNonQuery ();
 					}
 					connection.Close ();

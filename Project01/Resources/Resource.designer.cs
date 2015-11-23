@@ -50,6 +50,18 @@ namespace Project01
 			// aapt resource value: 0x7f020001
 			public const int icon1 = 2130837505;
 			
+			// aapt resource value: 0x7f020002
+			public const int TutorialTone1 = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int TutorialTone2 = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int TutorialTone3 = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int TutorialTone4 = 2130837509;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -66,11 +78,14 @@ namespace Project01
 			// aapt resource value: 0x7f06000b
 			public const int back = 2131099659;
 			
+			// aapt resource value: 0x7f060008
+			public const int checkedTextView1 = 2131099656;
+			
 			// aapt resource value: 0x7f060004
 			public const int currentWord = 2131099652;
 			
-			// aapt resource value: 0x7f06000a
-			public const int exampleMode = 2131099658;
+			// aapt resource value: 0x7f06000f
+			public const int exampleMode = 2131099663;
 			
 			// aapt resource value: 0x7f060005
 			public const int imageView1 = 2131099653;
@@ -90,14 +105,23 @@ namespace Project01
 			// aapt resource value: 0x7f060007
 			public const int record_button = 2131099655;
 			
-			// aapt resource value: 0x7f060008
-			public const int searchView1 = 2131099656;
+			// aapt resource value: 0x7f06000c
+			public const int searchView1 = 2131099660;
 			
 			// aapt resource value: 0x7f060001
 			public const int textView1 = 2131099649;
 			
+			// aapt resource value: 0x7f06000a
+			public const int textView2 = 2131099658;
+			
+			// aapt resource value: 0x7f06000e
+			public const int tutorial = 2131099662;
+			
 			// aapt resource value: 0x7f060009
-			public const int wordList = 2131099657;
+			public const int tutorial_gallery = 2131099657;
+			
+			// aapt resource value: 0x7f06000d
+			public const int wordList = 2131099661;
 			
 			static Id()
 			{
@@ -119,7 +143,10 @@ namespace Project01
 			public const int Lesson = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int WordSelect = 2130903042;
+			public const int ToneTutorial01 = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int WordSelect = 2130903043;
 			
 			static Layout()
 			{
@@ -135,7 +162,10 @@ namespace Project01
 		{
 			
 			// aapt resource value: 0x7f040000
-			public const int test = 2130968576;
+			public const int forget = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int test = 2130968577;
 			
 			static Raw()
 			{

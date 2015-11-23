@@ -1,14 +1,14 @@
 ﻿<Properties StartupItem="Project01\Project01.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus4Device" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Project01\Screens\LessonScreen.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Project01\Score.cs">
     <Files>
-      <File FileName="Project01\Screens\WordListScreen.cs" Line="75" Column="34" />
-      <File FileName="Project01\Word.cs" Line="15" Column="34" />
-      <File FileName="Project01\Screens\TaskDetailsScreen.cs" Line="41" Column="78" />
-      <File FileName="Project01\Screens\HomeScreen.cs" Line="1" Column="3" />
-      <File FileName="Project01\Screens\LessonScreen.cs" Line="76" Column="2" />
-      <File FileName="..\..\..\..\..\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.targets" Line="1959" Column="2" />
-      <File FileName="Project01\Properties\AndroidManifest.xml" Line="7" Column="12" />
+      <File FileName="Project01\Word.cs" Line="11" Column="14" />
+      <File FileName="Project01\Language.cs" Line="1" Column="1" />
+      <File FileName="Project01\WordDatabaseADO.cs" Line="58" Column="27" />
+      <File FileName="Project01\Score.cs" Line="8" Column="18" />
+      <File FileName="Project01\LanguageDatabaseADO.cs" Line="1" Column="1" />
+      <File FileName="Project01\LanguageRepositoryADO.cs" Line="1" Column="1" />
+      <File FileName="Project01\LanguageManager.cs" Line="33" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

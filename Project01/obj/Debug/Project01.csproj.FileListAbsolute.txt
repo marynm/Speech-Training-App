@@ -46,3 +46,9 @@ C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\De
 C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\drawable-xxxhdpi\icon1.png
 C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\R.cs.flag
 C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\uploadflags.txt
+C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\raw\forget.wav
+C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\layout\tonetutorial01.xml
+C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\drawable-hdpi\tutorialtone1.jpg
+C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\drawable-hdpi\tutorialtone2.jpg
+C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\drawable-hdpi\tutorialtone3.jpg
+C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\drawable-hdpi\tutorialtone4.jpg
