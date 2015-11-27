@@ -53,7 +53,6 @@
     <Compile Include="Screens\WordListScreen.cs" />
     <Compile Include="Screens\LanguageScreen.cs" />
     <Compile Include="Adapters\WordListAdapter.cs" />
-    <Compile Include="Word.cs" />
     <Compile Include="WordRepositoryADO.cs" />
     <Compile Include="WordDatabaseADO.cs" />
     <Compile Include="WordManager.cs" />
@@ -64,12 +63,16 @@
     <Compile Include="Score.cs" />
     <Compile Include="Screens\ToneTutorial.cs" />
     <Compile Include="ImageAdapter.cs" />
+    <Compile Include="FileAccessHelper.cs" />
+    <Compile Include="Screens\SQLite.cs" />
+    <Compile Include="word.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Resources\test.mp3" />
+    <None Include="Resources\WordDatabase" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -89,14 +92,14 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\icon1.png" />
     <AndroidResource Include="Resources\raw\forget.wav" />
     <AndroidResource Include="Resources\layout\ToneTutorial01.axml" />
-    <AndroidResource Include="Resources\drawable-hdpi\TutorialTone1.JPG" />
-    <AndroidResource Include="Resources\drawable-hdpi\TutorialTone2.JPG" />
-    <AndroidResource Include="Resources\drawable-hdpi\TutorialTone3.JPG" />
-    <AndroidResource Include="Resources\drawable-hdpi\TutorialTone4.JPG" />
     <AndroidResource Include="Resources\raw\F1mother.wav" />
     <AndroidResource Include="Resources\raw\F2numb.wav" />
     <AndroidResource Include="Resources\raw\F3horse.wav" />
     <AndroidResource Include="Resources\raw\F4scold.wav" />
+    <AndroidResource Include="Resources\drawable-hdpi\TutorialTone1.JPG" />
+    <AndroidResource Include="Resources\drawable-hdpi\TutorialTone2.JPG" />
+    <AndroidResource Include="Resources\drawable-hdpi\TutorialTone3.JPG" />
+    <AndroidResource Include="Resources\drawable-hdpi\TutorialTone4.JPG" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Screens\" />
@@ -105,4 +108,7 @@
     <Folder Include="Project01\Screens\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <AndroidAsset Include="Assets\WordDatabase" />
+  </ItemGroup>
 </Project>

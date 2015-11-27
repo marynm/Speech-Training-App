@@ -8,6 +8,8 @@ using Android.Widget;
 using Android.OS;
 using Android.Graphics;
 
+using SQLite;
+
 using System.Collections.Generic;
 
 
@@ -16,8 +18,8 @@ namespace Project01.Screens
 	[Activity (Label = "Project")]
 	public class WordListScreen : Activity
 	{
-		Adapters.WordListAdapter wordList;
-		IList<Word> words;
+		//Adapters.WordListAdapter wordList;
+		//IList<word> words;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -25,6 +27,9 @@ namespace Project01.Screens
 
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.WordSelect);
+
+			string dbPath = FileAccessHelper.GetLocalFilePath ("WordDatabase");
+			//LoadApplication (new word.Application (dbPath, new SQLitePlatformAndroid ()));
 
 			// Get our UI controls from the loaded layout:
 			Button exampleButton = FindViewById<Button>(Resource.Id.exampleMode);	//temporary button for development
@@ -40,27 +45,27 @@ namespace Project01.Screens
 			}
 
 
-			Word exampleWord = new Word();
+			//Word exampleWord = new Word();
 			int wordID = Intent.GetIntExtra("WordID", 0);
 
-			if(wordID > 0) {
-					exampleWord = WordManager.GetWord(wordID);
-			}
+			//if(wordID > 0) {
+			//		exampleWord = WordManager.GetWord(wordID);
+			//}
 
-			exampleWord.Name = "TheWord";
-			exampleWord.Sound = "/res/raw/test.g3pp";
+			//exampleWord.Name = "TheWord";
+			//exampleWord.Sound = "/res/raw/test.g3pp";
 
-			WordManager.SaveWord(exampleWord);
+			//WordManager.SaveWord(exampleWord);
 
 			ListView wordListView = FindViewById<ListView> (Resource.Id.wordList);
 
-			words = WordManager.GetWords();
+			//words = WordManager.GetWords();
 
 			// create our adapter
-			wordList = new Adapters.WordListAdapter(this, words);
+			//wordList = new Adapters.WordListAdapter(this, words);
 
 			//Hook up our adapter to our ListView
-			wordListView.Adapter = wordList;
+			//wordListView.Adapter = wordList;
 
 			if(backButton != null) {
 				backButton.Click += (sender, e) => {
@@ -72,7 +77,7 @@ namespace Project01.Screens
 			if(wordListView != null) {
 				wordListView.ItemClick += (object sender, AdapterView.ItemClickEventArgs e) => {
 					var wordDetails = new Intent (this, typeof (LessonScreen));
-					wordDetails.PutExtra ("WordID", words[e.Position].ID);
+			//		wordDetails.PutExtra ("WordID", words[e.Position].ID);
 					StartActivity (wordDetails);
 				};
 			}

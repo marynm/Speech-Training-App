@@ -1,3 +1,4 @@
+/*
 using System.Collections.Generic;
 using Android.App;
 using Android.Widget;
@@ -61,3 +62,4 @@ namespace Project01.Adapters {
 		}
 	}
 }
+*/

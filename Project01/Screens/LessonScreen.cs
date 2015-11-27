@@ -57,10 +57,8 @@ namespace Project01.Screens {
 			};
 
 				_record_button = FindViewById<Button> (Resource.Id.record_button);
-				//string path = "/sdcard/recording.3gpp";		//location to temporarily hold recorded file
-				string path = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath + "/test.3gpp";
-				//mFileName = Android.OS.Environment.GetExternalStoragePublicDirectory().AbsolutePath();
-				//mFileName += "/audiorecordtest.3gpp";
+				string path = "/sdcard/Recording.mp3";		//location to temporarily hold recorded file
+				//string path = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath + "/test.3gpp";
 
 				_record_button.Click += delegate {
 					//first press of Speak button starts recording, secodn press stops
@@ -68,9 +66,10 @@ namespace Project01.Screens {
 
 					if (!recording) {
 						_recorder.SetAudioSource (AudioSource.Mic);
-						_recorder.SetOutputFormat (OutputFormat.ThreeGpp);
-						_recorder.SetAudioEncoder (AudioEncoder.AmrNb);
+						_recorder.SetOutputFormat (OutputFormat.Mpeg4);
+						_recorder.SetAudioEncoder (AudioEncoder.Aac);
 						_recorder.SetOutputFile (path);
+
 						_recorder.Prepare ();
 						_recorder.Start ();
 						recording = true;

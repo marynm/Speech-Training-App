@@ -8,6 +8,6 @@ namespace Project01 {
 		public Language ()
 		{
 		}
-		public Word langWords { get; set; }
+		public word langWords { get; set; }
 	}
 }
