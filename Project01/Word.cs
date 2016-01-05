@@ -11,13 +11,14 @@ namespace Project01 {
 		}
 
 		[PrimaryKey, AutoIncrement]
-		public int Tone { get; set; }
+		public int ID { get; set; }
 
+		public int Tone { get; set; }
 		public string Word { get; set; }
 		public string Translation { get; set; }
 		public int Score { get; set; }
 		//public Score currentScore { get; set; }
-		public string Sound { get; set; }
+		public int Sound { get; set; }
 		public string Chatacter { get; set; }
 
 		public override string ToString()

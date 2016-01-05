@@ -10,6 +10,10 @@ Project01.Screens.LanguageScreen, Project01;md5f3a462944769a15104ad2134848f3866.
 Project01.Screens.LanguageScreen, Project01, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f3a462944769a15104ad2134848f3866.LanguageScreen
 Project01.Screens.LanguageScreen;md5f3a462944769a15104ad2134848f3866.LanguageScreen
 project01.screens.LanguageScreen;md5f3a462944769a15104ad2134848f3866.LanguageScreen
+Project01.Adapters.WordListAdapter, Project01;md5437307a7cc3476a31ab2005e4b4ff3b8.WordListAdapter
+Project01.Adapters.WordListAdapter, Project01, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5437307a7cc3476a31ab2005e4b4ff3b8.WordListAdapter
+Project01.Adapters.WordListAdapter;md5437307a7cc3476a31ab2005e4b4ff3b8.WordListAdapter
+project01.adapters.WordListAdapter;md5437307a7cc3476a31ab2005e4b4ff3b8.WordListAdapter
 Project01.Screens.ToneTutorial, Project01;md5f3a462944769a15104ad2134848f3866.ToneTutorial
 Project01.Screens.ToneTutorial, Project01, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f3a462944769a15104ad2134848f3866.ToneTutorial
 Project01.Screens.ToneTutorial;md5f3a462944769a15104ad2134848f3866.ToneTutorial

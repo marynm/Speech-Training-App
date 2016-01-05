@@ -1,4 +1,3 @@
-/*
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -25,7 +24,7 @@ namespace Project01 {
 
 		public static string DatabaseFilePath {
 			get { 
-				var sqliteFilename = "WordDatabase.db3";
+				var sqliteFilename = "MandarinDB.db3";
 				#if NETFX_CORE
 				var path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, sqliteFilename);
 				#else
@@ -52,17 +51,17 @@ namespace Project01 {
 			}
 		}
 
-		public static Word GetWord(int id)
+		public static word GetWord(int id)
 		{
 			return me.db.GetItem(id);
 		}
 
-		public static IEnumerable<Word> GetWords ()
+		public static IEnumerable<word> GetWords ()
 		{
 			return me.db.GetItems();
 		}
 
-		public static int SaveWord (Word item)
+		public static int SaveWord (word item)
 		{
 			return me.db.SaveItem(item);
 		}
@@ -74,4 +73,3 @@ namespace Project01 {
 
 	}
 }
-*/

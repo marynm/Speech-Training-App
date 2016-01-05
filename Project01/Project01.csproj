@@ -100,6 +100,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\TutorialTone2.JPG" />
     <AndroidResource Include="Resources\drawable-hdpi\TutorialTone3.JPG" />
     <AndroidResource Include="Resources\drawable-hdpi\TutorialTone4.JPG" />
+    <AndroidResource Include="Resources\values\theme.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Screens\" />

@@ -1,15 +1,17 @@
 ﻿<Properties StartupItem="Project01\Project01.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus4Device" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Project01\WordDatabaseADO.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\WordDatabaseADO.cs">
     <Files>
-      <File FileName="Project01\WordDatabaseADO.cs" Line="55" Column="7" />
-      <File FileName="Project01\Screens\ToneTutorial.cs" Line="42" Column="82" />
-      <File FileName="Project01\ImageAdapter.cs" Line="53" Column="3" />
+      <File FileName="Project01\Screens\WordListScreen.cs" Line="4" Column="23" />
+      <File FileName="Project01\Screens\LanguageScreen.cs" Line="35" Column="64" />
+      <File FileName="Project01\Adapters\WordListAdapter.cs" Line="16" Column="4" />
+      <File FileName="c:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\WordDatabaseADO.cs" Line="38" Column="123" />
+      <File FileName="Project01\word.cs" Line="15" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Project01 AndroidDesignerPreferredDevice="Nexus 7" />
+  <MonoDevelop.Ide.ItemProperties.Project01 AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

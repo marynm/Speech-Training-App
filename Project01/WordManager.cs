@@ -1,4 +1,4 @@
-/*using System;
+using System;
 using System.Collections.Generic;
 
 namespace Project01 {
@@ -11,17 +11,17 @@ namespace Project01 {
 		{
 		}
 		
-		public static Word GetWord(int id)
+		public static word GetWord(int id)
 		{
 			return WordRepositoryADO.GetWord(id);
 		}
 		
-		public static IList<Word> GetWords ()
+		public static IList<word> GetWords ()
 		{
-			return new List<Word>(WordRepositoryADO.GetWords());
+			return new List<word>(WordRepositoryADO.GetWords());
 		}
 
-		public static int SaveWord (Word item)
+		public static int SaveWord (word item)
 		{
 			return WordRepositoryADO.SaveWord(item);
 		}
@@ -33,4 +33,3 @@ namespace Project01 {
 
 	}
 }
-*/

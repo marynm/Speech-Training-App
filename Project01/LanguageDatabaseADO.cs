@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*
+ * using System;
 using System.Linq;
 using System.Collections.Generic;
 
@@ -99,7 +100,7 @@ namespace Project01
 		{
 			int r;
 			lock (locker) {
-				//if (item.ID != 0) 
+				if (item.ID != 0) 
 				{
 					connection = new SqliteConnection ("Data Source=" + path);
 					connection.Open ();
@@ -111,11 +112,11 @@ namespace Project01
 						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.Score });
 						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.ID });
 						*/
-						r = command.ExecuteNonQuery ();
+/*						r = command.ExecuteNonQuery ();
 					}
 					connection.Close ();
 					return r;
-				} //else 
+				} else 
 			{
 					connection = new SqliteConnection ("Data Source=" + path);
 					connection.Open ();
@@ -126,7 +127,7 @@ namespace Project01
 						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Definition });
 						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.Score });
 						*/
-						r = command.ExecuteNonQuery ();
+/*						r = command.ExecuteNonQuery ();
 					}
 					connection.Close ();
 					return r;
@@ -134,7 +135,7 @@ namespace Project01
 
 			}
 		}
-/*	
+
 		public int DeleteItem(int id) 
 		{
 			lock (locker) {
@@ -150,6 +151,7 @@ namespace Project01
 				return r;
 			}
 		}
-*/
+
 	}
 }
+*/

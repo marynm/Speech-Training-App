@@ -41,6 +41,22 @@ namespace Project01
 			}
 		}
 		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f070000
+			public const int theme_devicedefault_background = 2131165184;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
+			{
+			}
+		}
+		
 		public partial class Drawable
 		{
 			
@@ -51,16 +67,19 @@ namespace Project01
 			public const int icon1 = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int TutorialTone1 = 2130837506;
+			public const int monoandroidsplash = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int TutorialTone2 = 2130837507;
+			public const int TutorialTone1 = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int TutorialTone3 = 2130837508;
+			public const int TutorialTone2 = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int TutorialTone4 = 2130837509;
+			public const int TutorialTone3 = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int TutorialTone4 = 2130837510;
 			
 			static Drawable()
 			{
@@ -75,53 +94,56 @@ namespace Project01
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f06000b
-			public const int back = 2131099659;
+			// aapt resource value: 0x7f080006
+			public const int audioPlot = 2131230726;
 			
-			// aapt resource value: 0x7f060008
-			public const int checkedTextView1 = 2131099656;
+			// aapt resource value: 0x7f08000c
+			public const int back = 2131230732;
 			
-			// aapt resource value: 0x7f060004
-			public const int currentWord = 2131099652;
+			// aapt resource value: 0x7f080009
+			public const int checkedTextView1 = 2131230729;
 			
-			// aapt resource value: 0x7f06000f
-			public const int exampleMode = 2131099663;
+			// aapt resource value: 0x7f080010
+			public const int exampleMode = 2131230736;
 			
-			// aapt resource value: 0x7f060005
-			public const int imageView1 = 2131099653;
+			// aapt resource value: 0x7f080002
+			public const int language = 2131230722;
 			
-			// aapt resource value: 0x7f060002
-			public const int language = 2131099650;
+			// aapt resource value: 0x7f080000
+			public const int linearLayout1 = 2131230720;
 			
-			// aapt resource value: 0x7f060000
-			public const int linearLayout1 = 2131099648;
+			// aapt resource value: 0x7f080003
+			public const int listView1 = 2131230723;
 			
-			// aapt resource value: 0x7f060003
-			public const int listView1 = 2131099651;
+			// aapt resource value: 0x7f080007
+			public const int listen_button = 2131230727;
 			
-			// aapt resource value: 0x7f060006
-			public const int listen_button = 2131099654;
+			// aapt resource value: 0x7f080004
+			public const int playWord = 2131230724;
 			
-			// aapt resource value: 0x7f060007
-			public const int record_button = 2131099655;
+			// aapt resource value: 0x7f080008
+			public const int record_button = 2131230728;
 			
-			// aapt resource value: 0x7f06000c
-			public const int searchView1 = 2131099660;
+			// aapt resource value: 0x7f08000d
+			public const int searchView1 = 2131230733;
 			
-			// aapt resource value: 0x7f060001
-			public const int textView1 = 2131099649;
+			// aapt resource value: 0x7f080001
+			public const int textView1 = 2131230721;
 			
-			// aapt resource value: 0x7f06000a
-			public const int textView2 = 2131099658;
+			// aapt resource value: 0x7f08000b
+			public const int textView2 = 2131230731;
 			
-			// aapt resource value: 0x7f06000e
-			public const int tutorial = 2131099662;
+			// aapt resource value: 0x7f080005
+			public const int toneNumber = 2131230725;
 			
-			// aapt resource value: 0x7f060009
-			public const int tutorial_gallery = 2131099657;
+			// aapt resource value: 0x7f08000f
+			public const int tutorial = 2131230735;
 			
-			// aapt resource value: 0x7f06000d
-			public const int wordList = 2131099661;
+			// aapt resource value: 0x7f08000a
+			public const int tutorial_gallery = 2131230730;
+			
+			// aapt resource value: 0x7f08000e
+			public const int wordList = 2131230734;
 			
 			static Id()
 			{
@@ -204,6 +226,25 @@ namespace Project01
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int Mono_Android_Theme_Splash = 2131099648;
+			
+			// aapt resource value: 0x7f060001
+			public const int Theme_Custom = 2131099649;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

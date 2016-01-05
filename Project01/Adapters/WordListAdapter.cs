@@ -1,4 +1,3 @@
-/*
 using System.Collections.Generic;
 using Android.App;
 using Android.Widget;
@@ -7,17 +6,17 @@ namespace Project01.Adapters {
 	/// <summary>
 	/// Adapter that presents Words in a row-view
 	/// </summary>
-	public class WordListAdapter : BaseAdapter<Word> {
+	public class WordListAdapter : BaseAdapter<word> {
 		Activity context = null;
-		IList<Word> words = new List<Word>();
+		IList<word> words = new List<word>();
 		
-		public WordListAdapter (Activity context, IList<Word> tasks) : base ()
+		public WordListAdapter (Activity context, IList<word> words) : base ()
 		{
 			this.context = context;
 			this.words = words;
 		}
 		
-		public override Word this[int position]
+		public override word this[int position]
 		{
 			get { return words[position]; }
 		}
@@ -42,24 +41,23 @@ namespace Project01.Adapters {
 			// will sound familiar to MonoTouch developers with UITableViewCell.DequeueReusableCell()
 			var view = (convertView ?? 
 					context.LayoutInflater.Inflate(
-					Android.Resource.Layout.SimpleListItemChecked, 
+					Android.Resource.Layout.SimpleListItem1, 
 					parent, 
-					false)) as CheckedTextView;
+					false)) as TextView;
 
-			view.SetText (item.Name==""?"<new task>":item.Name, TextView.BufferType.Normal);
+			view.SetText (item.Word==""?"<new word>":item.Word, TextView.BufferType.Normal);
 		
 
 			// Find references to each subview in the list item's view
-			//var txtName = view.FindViewById<TextView>(Resource.Id.NameText);
-			//var txtDescription = view.FindViewById<TextView>(Resource.Id.NotesText);
+			//var txtWord = view.FindViewById<TextView>(Resource.Id.NameText);
+			//var txtTranslation = view.FindViewById<TextView>(Resource.Id.NotesText);
 
 			//Assign item's values to the various subviews
-			//txtName.SetText (item.Name, TextView.BufferType.Normal);
-			//txtDescription.SetText (item.Notes, TextView.BufferType.Normal);
+			//txtWord.SetText (item.Word, TextView.BufferType.Normal);
+			//txtTranslation.SetText (item.Translation, TextView.BufferType.Normal);
 
 			//Finally return the view
 			return view;
 		}
 	}
 }
-*/

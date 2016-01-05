@@ -17,7 +17,6 @@ namespace Project01.Screens {
 	/// 
 	/// 	
 
-
 	[Activity (Label = "Project")]			
 	public class LessonScreen : Activity {
 
@@ -27,25 +26,43 @@ namespace Project01.Screens {
 		bool recording = false;
 		bool recording_made = false;
 		bool playing = false;
+		int word_sample = -1;
 
 		MediaPlayer _player;
 		Button _playback_button;
 		Button _play_word;
+		TextView _tone;
 
-		private static String mFileName = null;
+		word currentWord = new word ();
+
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
-			SetContentView (Resource.Layout.Lesson);
+			int wordID = Intent.GetIntExtra("WordID", 0);
+			if(wordID > 0) {
+				currentWord = WordManager.GetWord(wordID);
+			}
 
-			_play_word = FindViewById<Button> (Resource.Id.currentWord);
+			//Set up and connect view
+			SetContentView (Resource.Layout.Lesson);
+			_play_word = FindViewById<Button> (Resource.Id.playWord);
+			_record_button = FindViewById<Button> (Resource.Id.record_button);
+			_tone = FindViewById<TextView> (Resource.Id.toneNumber);
+			_playback_button = FindViewById<Button> (Resource.Id.listen_button);
+			_playback_button.Enabled = false;
+
+			//get attributes from current word in database
+			_play_word.Text = currentWord.Word;
+			_tone.Text = currentWord.Tone.ToString();
+			word_sample = currentWord.Sound;
+
 
 			_play_word.Click += delegate {
 
 				if(!playing) {
-					_player = MediaPlayer.Create (this, Resource.Raw.forget);
+					_player = MediaPlayer.Create (this, word_sample);
 					_player.Start ();
 					playing = true;
 				}
@@ -55,8 +72,7 @@ namespace Project01.Screens {
 				}
 					
 			};
-
-				_record_button = FindViewById<Button> (Resource.Id.record_button);
+				
 				string path = "/sdcard/Recording.mp3";		//location to temporarily hold recorded file
 				//string path = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath + "/test.3gpp";
 
@@ -64,43 +80,44 @@ namespace Project01.Screens {
 					//first press of Speak button starts recording, secodn press stops
 					//record_button.Enabled = !record_button.Enabled;
 
-					if (!recording) {
+					if(!recording_made && !recording) {
 						_recorder.SetAudioSource (AudioSource.Mic);
 						_recorder.SetOutputFormat (OutputFormat.Mpeg4);
 						_recorder.SetAudioEncoder (AudioEncoder.Aac);
 						_recorder.SetOutputFile (path);
+					}
 
-						_recorder.Prepare ();
-						_recorder.Start ();
+					if (!recording) {
+
+						//_recorder.Prepare ();
+						//_recorder.Start ();
 						recording = true;
+						_record_button.Text = "Done Speaking";
 					} else {
-						_recorder.Stop ();
-						_recorder.Reset ();
+						//_recorder.Stop ();
+						//_recorder.Reset ();
 						recording = false;
+						_record_button.Text = "Speak";
 						recording_made = true;
+						_playback_button.Enabled = true;
 					}
 
 				};
-
-			_playback_button = FindViewById<Button> (Resource.Id.listen_button);
+				
 
 			_playback_button.Click += delegate {
-				//Pressing Listen button cuases the user recodeing to play back
-
+				//Pressing Listen button cuases the user recording to play back
 				if(recording_made) {
 					_player.SetDataSource (path);
 					_player.Prepare ();
 					_player.Start ();
+					playing = true;
 				}
 				else if(playing) {
 					_player.Stop ();
 					playing = false;
 				}
-				else {
-					_player = MediaPlayer.Create(this, Resource.Raw.test);
-					_player.Start ();
-					playing = true;
-				}
+
 
 
 			};

@@ -28,10 +28,16 @@
         p1:minWidth="25px"
         p1:minHeight="25px"
         p1:layout_width="match_parent"
-        p1:layout_height="100dp"
+        p1:layout_height="205.0dp"
         p1:id="@+id/wordList"
         p1:layout_marginBottom="0.0dp"
-        p1:layout_marginTop="0.0dp" />
+        p1:layout_marginTop="0.0dp"
+        p1:scrollbarSize="10dp"
+        p1:scrollbars="vertical"
+        p1:scrollbarStyle="insideInset"
+        p1:overScrollMode="always"
+        p1:verticalScrollbarPosition="right"
+        p1:fadeScrollbars="false" />
     <Button
         p1:text="Tone Tutorial"
         p1:layout_width="match_parent"

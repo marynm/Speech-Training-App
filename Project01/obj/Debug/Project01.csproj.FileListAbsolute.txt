@@ -56,3 +56,6 @@ C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\De
 C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\raw\f2numb.wav
 C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\raw\f3horse.wav
 C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\raw\f4scold.wav
+C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\drawable\monoandroidsplash.png
+C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\values\styles.xml
+C:\Users\Maryn\Documents\Projects\Project01\Speech-Training-App\Project01\obj\Debug\res\values\theme.xml

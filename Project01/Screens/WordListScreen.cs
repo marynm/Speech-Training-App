@@ -18,24 +18,33 @@ namespace Project01.Screens
 	[Activity (Label = "Project")]
 	public class WordListScreen : Activity
 	{
-		//Adapters.WordListAdapter wordList;
-		//IList<word> words;
+		IList<word> words;
+		Adapters.WordListAdapter wordList;
+		ListView wordListView;
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
-			// Set our view from the "main" layout resource
+			// Set view from layout resource
 			SetContentView (Resource.Layout.WordSelect);
 
 			string dbPath = FileAccessHelper.GetLocalFilePath ("WordDatabase");
-			//LoadApplication (new word.Application (dbPath, new SQLitePlatformAndroid ()));
+			//LoadApplication (new word.App (dbPath, new SQLitePlatformAndroid ()));
 
 			// Get our UI controls from the loaded layout:
 			Button exampleButton = FindViewById<Button>(Resource.Id.exampleMode);	//temporary button for development
 			Button backButton = FindViewById<Button>(Resource.Id.back);
 			Button tutorialButton = FindViewById<Button>(Resource.Id.tutorial); 
+			wordListView = FindViewById<ListView> (Resource.Id.wordList);
 
+			words = WordManager.GetWords();
+
+			// create our adapter
+			wordList = new Adapters.WordListAdapter(this, words);
+
+			//Hook up our adapter to our ListView
+			wordListView.Adapter = wordList;
 
 			//wire up add example button handler
 			if(exampleButton != null) {
@@ -45,27 +54,7 @@ namespace Project01.Screens
 			}
 
 
-			//Word exampleWord = new Word();
-			int wordID = Intent.GetIntExtra("WordID", 0);
 
-			//if(wordID > 0) {
-			//		exampleWord = WordManager.GetWord(wordID);
-			//}
-
-			//exampleWord.Name = "TheWord";
-			//exampleWord.Sound = "/res/raw/test.g3pp";
-
-			//WordManager.SaveWord(exampleWord);
-
-			ListView wordListView = FindViewById<ListView> (Resource.Id.wordList);
-
-			//words = WordManager.GetWords();
-
-			// create our adapter
-			//wordList = new Adapters.WordListAdapter(this, words);
-
-			//Hook up our adapter to our ListView
-			//wordListView.Adapter = wordList;
 
 			if(backButton != null) {
 				backButton.Click += (sender, e) => {
@@ -77,7 +66,7 @@ namespace Project01.Screens
 			if(wordListView != null) {
 				wordListView.ItemClick += (object sender, AdapterView.ItemClickEventArgs e) => {
 					var wordDetails = new Intent (this, typeof (LessonScreen));
-			//		wordDetails.PutExtra ("WordID", words[e.Position].ID);
+					wordDetails.PutExtra ("WordID", words[e.Position].ID);
 					StartActivity (wordDetails);
 				};
 			}
@@ -88,6 +77,20 @@ namespace Project01.Screens
 					StartActivity(typeof(ToneTutorial));
 				};
 			}
+		}
+
+		protected override void OnResume ()
+		{
+			base.OnResume ();
+
+			words = WordManager.GetWords();
+
+			// create our adapter
+			wordList = new Adapters.WordListAdapter(this, words);
+
+			//Hook up our adapter to our ListView
+			wordListView.Adapter = wordList;
+
 		}
 	}
 }

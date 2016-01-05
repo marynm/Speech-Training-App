@@ -1,4 +1,3 @@
-/*
 using System;
 using System.Linq;
 using System.Collections.Generic;
@@ -36,7 +35,7 @@ namespace Project01
 
 				connection.Open ();
 				var commands = new[] {
-					"CREATE TABLE [Items] (_id INTEGER PRIMARY KEY ASC, Name NTEXT, Definition NTEXT, Score INTEGER);"
+					"CREATE TABLE [Items] (_id INTEGER PRIMARY KEY ASC, Tone INTEGER, Word NTEXT, Translation NTEXT, Score INTEGER, Sound INTEGER, Character NTEXT);"
 				};
 				foreach (var command in commands) {
 					using (var c = connection.CreateCommand ()) {
@@ -50,25 +49,25 @@ namespace Project01
 			Console.WriteLine (output);
 		}
 
-		/// <summary>Convert from DataReader to Word object</summary>
-		Word FromReader (SqliteDataReader r) {
-			var t = new Word ();
+		/// <summary>Convert from DataReader to word object</summary>
+		word FromReader (SqliteDataReader r) {
+			var t = new word ();
 			t.ID = Convert.ToInt32 (r ["_id"]);
-			t.Name = r ["Name"].ToString ();
-			t.Definition = r ["Definition"].ToString ();
+			t.Word = r ["Word"].ToString ();
+			t.Translation = r ["Translation"].ToString ();
 			//t.currentScore.Total = Convert.ToInt32( r ["Score"]); //Convert.ToInt32 (r ["Score"]) == 1 ? true : false;
 			return t;
 		}
 
-		public IEnumerable<Word> GetItems ()
+		public IEnumerable<word> GetItems ()
 		{
-			var tl = new List<Word> ();
+			var tl = new List<word> ();
 
 			lock (locker) {
 				connection = new SqliteConnection ("Data Source=" + path);
 				connection.Open ();
 				using (var contents = connection.CreateCommand ()) {
-					contents.CommandText = "SELECT [_id], [Name], [Definition], [Score] from [Items]";
+					contents.CommandText = "SELECT [_id], [Word], [Translation], [Tone], [Character] from [Items]";
 					var r = contents.ExecuteReader ();
 					while (r.Read ()) {
 						tl.Add (FromReader(r));
@@ -79,14 +78,14 @@ namespace Project01
 			return tl;
 		}
 
-		public Word GetItem (int id) 
+		public word GetItem (int id) 
 		{
-			var t = new Word ();
+			var t = new word ();
 			lock (locker) {
 				connection = new SqliteConnection ("Data Source=" + path);
 				connection.Open ();
 				using (var command = connection.CreateCommand ()) {
-					command.CommandText = "SELECT [_id], [Name], [Definition], [Score] from [Items] WHERE [_id] = ?";
+					command.CommandText = "SELECT [_id], [Word], [Translation], [Tone], [Sound], [Score] from [Items] WHERE [_id] = ?";
 					command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = id });
 					var r = command.ExecuteReader ();
 					while (r.Read ()) {
@@ -99,7 +98,7 @@ namespace Project01
 			return t;
 		}
 
-		public int SaveItem (Word item) 
+		public int SaveItem (word item) 
 		{
 			int r;
 			lock (locker) {
@@ -107,10 +106,13 @@ namespace Project01
 					connection = new SqliteConnection ("Data Source=" + path);
 					connection.Open ();
 					using (var command = connection.CreateCommand ()) {
-						command.CommandText = "UPDATE [Items] SET [Name] = ?, [Definition] = ?, [Score] = ? WHERE [_id] = ?;";
-						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Name });
-						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Definition });
-						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.currentScore });
+						command.CommandText = "UPDATE [Items] SET [Word] = ?, [Tone] = ?, [Character] = ?, [Translation] = ?, [Sound] = ?, [Score] = ? WHERE [_id] = ?;";
+						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Word });
+						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.Tone });
+						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Chatacter });
+						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Translation });
+						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.Sound });
+						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.Score });
 						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.ID });
 						r = command.ExecuteNonQuery ();
 					}
@@ -120,10 +122,12 @@ namespace Project01
 					connection = new SqliteConnection ("Data Source=" + path);
 					connection.Open ();
 					using (var command = connection.CreateCommand ()) {
-						command.CommandText = "INSERT INTO [Items] ([Name], [Definition], [Score]) VALUES (? ,?, ?)";
-						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Name });
-						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Definition });
-						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.currentScore });
+						command.CommandText = "INSERT INTO [Items] ([Word], [Tone], [Character], [Translation], [Sound]) VALUES (? ,?, ?, ?, ?)";
+						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Word });
+						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.Tone });
+						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Chatacter });
+						command.Parameters.Add (new SqliteParameter (DbType.String) { Value = item.Translation });
+						command.Parameters.Add (new SqliteParameter (DbType.Int32) { Value = item.Sound });
 						r = command.ExecuteNonQuery ();
 					}
 					connection.Close ();
@@ -151,4 +155,3 @@ namespace Project01
 
 	}
 }
-*/
